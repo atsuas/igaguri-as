@@ -9,6 +9,11 @@ public class Igaguricontroller : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(dir);
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
